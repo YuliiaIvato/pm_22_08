@@ -21,17 +21,11 @@ a {
 }
 
 ///////////////////////////////
-// HEADER //
-//.header{
-//  background-color: white;
-//  padding: 100px 0 100px 0;
-//}
-
+// HEADER
 .header-left, .header-right {
   background-color: white;
   padding: 70px 0 70px 0;
 }
-
 .vertical-line {
   width: 70px;
   height: 390px;
@@ -68,7 +62,6 @@ h1{
   width: 400px;
   height: 390px;
 }
-
 .contact-header h2{
   margin-top: 10px;
 }
@@ -104,10 +97,8 @@ h1{
   text-align: center;
   align-items: center; /* Вирівнювання по вертикалі */
   justify-content: center; /* Вирівнювання по горизонталі */
-
   background-color: white; /* Білий фон для іконки */
   color: #333; /* колір для іконки */
-
 }
 .contact-text p{
   margin: 0; /* Скидаємо стандартні відступи у параграфів */
@@ -121,16 +112,26 @@ h1{
 }
 ///////////////////////////////
 
-// ROW //
-//.about i, .skills i, .languages i, .hobbies i, .education i, .references i, .experience i {
-.row-i{
-  font-size: 37px; /* Розмір шрифту для іконки */
-  width: 45px; /* Ширина іконки */
-  height: 45px; /* Висота іконки */
+// main//
+.left, .right {
+  padding: 0;
+}
+.main-left{
+  padding: 70px;
+  background-color: #eeeeee;
+}
+.main-right{
+  padding: 0 70px 70px 70px;
+  background-color: white;
+}
+
+.main-i{
+  font-size: 48px; /* Розмір шрифту для іконки */
+  width: 60px; /* Ширина іконки */
+  height: 60px; /* Висота іконки */
   align-items: center; /* Вирівнювання по вертикалі */
   justify-content: center; /* Вирівнювання по горизонталі */
-  margin: 0 11px 25px 0; /* Відступ праворуч від іконки */
-
+  margin: 0 15px 30px 0; /* Відступ праворуч та знизу від іконки */
   display: inline-flex; /* Додаємо flexbox для вирівнювання */
   background-color: #333;
   color: white;
@@ -145,11 +146,8 @@ h1{
 ///////////////////////////////
 
 // LEFT //
-.left {
-  background-color: #eeeeee; /* Колір фону лівого блоку */
-  //padding: 100px; /* Відступи всередині від лівого боку */
-  padding: 0;
-}
+
+
 
 .about p{
   font-size: 18px;
@@ -199,11 +197,11 @@ h1{
 
 ///////////////////////////////
 // RIGHT //
-.right {
-  background-color: white;
-  //padding: 0 100px 100px 100px; /* Відступ зліва в правому блоці */
-  padding: 0;
-}
+//.right {
+//  background-color: white;
+//  //padding: 0 100px 100px 100px; /* Відступ зліва в правому блоці */
+//  padding: 0;
+//}
 .right h3{
   font-size: 20px;
 }
