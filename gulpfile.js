@@ -3,11 +3,15 @@ const { src, dest, series, parallel, watch } = require('gulp');
 const file_include = require('gulp-file-include')
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
+// const sass = require('sass');
+// const gulpSass = require('gulp-sass')(sass);
+
 const postcss = require('gulp-postcss');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 
 // html task
@@ -29,11 +33,22 @@ const js_task = () => src('app/js/*.js')
 
 
 //scss task
+// const scss_task = () => {
+//     return src('app/scss/*.scss') // Вибір файлів SCSS
+//         .pipe(sass().on('error', sass.logError)) // Компіляція SCSS у CSS
+//         .pipe(cssnano()) // Мінімізація CSS
+//         .pipe(postcss({}))
+//         .pipe(rename({ suffix: '.min' })) // Додавання суфіксу .min до файлу
+//         .pipe(dest('dist/css')) // Збереження результату
+//         .pipe(browserSync.stream());
+// };
+
 const scss_task = () => {
     return src('app/scss/*.scss') // Вибір файлів SCSS
-        .pipe(sass()) // Компіляція SCSS у CSS
+        .pipe(sass().on('error', sass.logError)) // Компіляція SCSS у CSS
+        .pipe(postcss([autoprefixer()])) // Додавання префіксів
         .pipe(cssnano()) // Мінімізація CSS
-        .pipe(rename({suffix: '.min'})) // Додавання суфіксу .min до файлу
+        .pipe(rename({ suffix: '.min' })) // Додавання суфіксу .min до файлу
         .pipe(dest('dist/css')) // Збереження результату
         .pipe(browserSync.stream());
 };

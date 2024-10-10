@@ -1,0 +1,265 @@
+body {
+  background-color: dimgrey;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  //padding-bottom:10px ;
+}
+h2, h3 {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 800;
+  margin: 0 0 0;
+  display: flex;
+}
+p{
+  font-size: 36px;
+  font-weight: 400;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+///////////////////////////////
+// HEADER //
+.header{
+  background-color: white;
+  padding: 100px 0 100px 0;
+}
+
+.vertical-line {
+  width: 100px;
+  height: 600px;
+  background-color: #333;
+}
+.text-row{
+  padding-left: 60px; /* Відступ між лінією та текстом */
+  max-width: calc(100% - 100px); /* Максимальна ширина контейнера тексту */
+  flex-grow: 1; /* Дозволяє текстовому контейнеру займати залишок простору */
+}
+h1{
+  font-weight: 900;
+  font-size: 192px;
+  line-height: 1;
+}
+.text-row p{
+  font-size: 50px;
+  padding: 0 0 0 30px;
+  letter-spacing: 3px;
+}
+
+.Noel{
+  margin-left: 40px; /* Відступ між фото та контактами */
+  background-color: #333; /* Колір фону для елемента падінгу */
+  padding: 20px; /* Внутрішній відступ */
+  width: 600px;
+  height: 600px;
+}
+
+.contact {
+  background-color: #333;
+  color: white;
+  padding: 50px; /* Внутрішні відступи */
+  width: 590px;
+  height: 600px;
+}
+
+.contact-header h2{
+  margin: 10px;
+}
+.contact-header{
+  display: flex; /* Використання flexbox для вирівнювання */
+}
+.contact-header-i{
+  font-size: 75px; /* Розмір шрифту для іконки */
+  width: 90px; /* Ширина іконки */
+  height: 90px; /* Висота іконки */
+  align-items: center; /* Вирівнювання по вертикалі */
+  justify-content: center; /* Вирівнювання по горизонталі */
+  margin: 0 22px 60px 0; /* Відступ праворуч від іконки */
+  display: inline-flex; /* Додаємо flexbox для вирівнювання */
+  background-color: white;
+  color: #333333;
+
+  //font-size: 60px; /* Розмір шрифту для іконки */
+  //width: 75px; /* Ширина іконки */
+  //height: 75px; /* Висота іконки */
+}
+
+.contact-phone, .contact-globe, .contact-map {
+  display: flex; /* Використання flexbox для вирівнювання */
+  align-items: center; /* Вертикальне вирівнювання елементів по центру */
+  margin-bottom: 45px;
+}
+.telephone-i, .globe-i, .map-i {
+  font-size: 38px; /* Розмір шрифту для іконки */
+  width: 52px; /* Ширина іконки */
+  height: 52px; /* Висота іконки */
+  margin-right: 25px; /* Відступ праворуч від іконки */
+  text-align: center;
+  align-items: center; /* Вирівнювання по вертикалі */
+  justify-content: center; /* Вирівнювання по горизонталі */
+
+  background-color: white; /* Білий фон для іконки */
+  color: #333; /* колір для іконки */
+
+}
+.contact-text p{
+  margin: 0; /* Скидаємо стандартні відступи у параграфів */
+  padding: 0; /* Скидаємо внутрішні відступи у параграфів */
+  line-height: 1.2; /* Висота рядка для тексту, налаштуйте за потребою */
+
+}
+
+.contact a {
+  color: white ;
+  text-decoration: none;
+}
+///////////////////////////////
+
+// ROW //
+//.about i, .skills i, .languages i, .hobbies i, .education i, .references i, .experience i {
+.row-i{
+  font-size: 75px; /* Розмір шрифту для іконки */
+  width: 90px; /* Ширина іконки */
+  height: 90px; /* Висота іконки */
+  align-items: center; /* Вирівнювання по вертикалі */
+  justify-content: center; /* Вирівнювання по горизонталі */
+  margin: 0 22px 50px 0; /* Відступ праворуч від іконки */
+
+  display: inline-flex; /* Додаємо flexbox для вирівнювання */
+  background-color: #333;
+  color: white;
+}
+.header-i h2{
+  margin: 10px;
+}
+.header-i{
+  display: flex; /* Використання flexbox для вирівнювання */
+}
+
+///////////////////////////////
+
+// LEFT //
+.left {
+  background-color: #eeeeee; /* Колір фону лівого блоку */
+  padding: 100px; /* Відступи всередині від лівого боку */
+}
+
+.about p{
+  font-size: 36px;
+}
+.skills p, .hobbies p{
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center; /* Вертикальне вирівнювання по центру */
+  margin-bottom: 1px; /* Відступ між прогрес-барами */
+}
+.progress-bar {
+  width: 40%;
+  border: 2px solid #333; /* Обведення кольором */
+  background-color: transparent; /* Прозорий фон */
+  overflow: hidden;
+  height: 15px;
+  margin-left: auto; /* Вирівнюємо прогрес-бар по правому краю */
+  //margin-right: 10px; /* Відступ від правої стінки 10 пікселів */
+}
+.progress {
+  background-color: #333;
+  height: 100%;
+  width: 0; /* Спочатку 0%, потім це змінюється через інлайн стиль в HTML */
+  transition: width 0.3s ease;
+  border-radius: 0;
+}
+.progress-container:last-child {
+  margin-bottom: 0; /* Прибираємо нижній відступ для останнього прогрес-бара */
+}
+
+.language {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 32px; /* Встановлює розмір шрифту */
+  color: #333; /* Встановлює колір тексту */
+  background-color: transparent;
+  border: 5px solid #333 !important;
+  padding: 25px; /* Внутрішній відступ для тексту */
+  min-width: 100px; /* Мінімальна ширина для рівності коробок */
+  margin: 10px; /* Відстань між коробками */
+}
+
+///////////////////////////////
+// RIGHT //
+.right {
+  background-color: white;
+  padding: 0 100px 100px 100px; /* Відступ зліва в правому блоці */
+}
+.right h3{
+  font-size: 40px;
+}
+//education
+.education h3 {
+  margin-bottom: 15px;
+}
+.education p{
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.education-item{
+  line-height: 1;
+}
+//References
+.references, .experience {
+  margin-top: 30px;
+}
+.reference-item  {
+  line-height: 0.9;
+  margin-bottom: 45px; /*  інтервал між блоками */
+}
+.reference-item h3 {
+  margin-bottom: 12px;
+}
+.reference-item p {
+  font-size: 30px;
+  margin-bottom: 10px; /* Задаємо інтервал між параграфами */
+  //margin-bottom: 13px; /* інтервал між параграфами */
+}
+//Job
+.job{
+  margin-bottom: 30px;
+}
+.job-dates {
+  font-size: 36px;
+  text-transform: capitalize; // перша велика
+  font-weight: 600;
+}
+.job-location{
+  font-style: italic; /* Курсив */
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.job-description{
+  font-weight: 500;
+  font-size: 30px;
+}
+
+//Line
+.left .horizontal-line {
+  width: 100%; /* Ширина лінії на всю ширину */
+  height: 3px; /* Товщина лінії */
+  background-color: #333; /* Колір лінії */
+  margin: 38px 0; /* Відступи зверху і знизу */
+}
+.right .horizontal-line {
+  width: 100%; /* Ширина лінії на всю ширину */
+  height: 3px; /* Товщина лінії */
+  background-color: #333; /* Колір лінії */
+  margin: 47px 0; /* Відступи зверху і знизу */
+}
