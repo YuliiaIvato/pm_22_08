@@ -101,9 +101,9 @@ h1{
   color: #333; /* колір для іконки */
 }
 .contact-text p{
-  margin: 0; /* Скидаємо стандартні відступи у параграфів */
-  padding: 0; /* Скидаємо внутрішні відступи у параграфів */
-  line-height: 1.3; /* Висота рядка для тексту, налаштуйте за потребою */
+  margin: 0; /* скидаємо стандартні відступи у параграфів */
+  padding: 0; /* скидаємо внутрішні відступи у параграфів */
+  line-height: 1.3; /* Висота рядка для тексту */
 }
 
 .contact a {
@@ -119,16 +119,14 @@ h1{
   padding: 70px;
   background-color: #eeeeee;
 
-
 }
 .main-right{
   padding: 0 70px 70px 70px;
   background-color: white;
-  height: 100%;
+  //height: 100%;
 }
-
 .main-i{
-  font-size: 48px; /* Розмір шрифту для іконки */
+  font-size: 40px; /* Розмір шрифту для іконки */
   width: 60px; /* Ширина іконки */
   height: 60px; /* Висота іконки */
   align-items: center; /* Вирівнювання по вертикалі */
@@ -148,30 +146,34 @@ h1{
 ///////////////////////////////
 
 // LEFT //
-
 .about p{
-  font-size: 24px;
   text-align: justify;
   line-height: 1.6;
+  margin: 0;
 }
-.skills p, .hobbies p{
-  font-size: 17px;
-  font-weight: 700;
+.about p:last-child {
+  margin: 0;
 }
-
+.progress-container p{
+  font-weight: 600;
+  margin: 0;
+}
 .progress-container {
   display: flex;
   align-items: center; /* Вертикальне вирівнювання по центру */
-  margin-bottom: 1px; /* Відступ між прогрес-барами */
+  margin-bottom: 12px ; /* Відступ між прогрес-барами */
+  padding: 0;
+}
+.progress-container:last-child {
+  margin-bottom: 0; /* Прибираємо нижній відступ для останнього прогрес-бара */
 }
 .progress-bar {
-  width: 40%;
+  width: 45%;
   border: 2px solid #333; /* Обведення кольором */
   background-color: transparent; /* Прозорий фон */
   overflow: hidden;
-  height: 15px;
-  margin-left: auto; /* Вирівнюємо прогрес-бар по правому краю */
-  //margin-right: 10px; /* Відступ від правої стінки 10 пікселів */
+  height: 12px;
+  margin-left: auto; /* Вирівнюємо прогрес-бар по лівій лінії */
 }
 .progress {
   background-color: #333;
@@ -180,9 +182,7 @@ h1{
   transition: width 0.3s ease;
   border-radius: 0;
 }
-.progress-container:last-child {
-  margin-bottom: 0; /* Прибираємо нижній відступ для останнього прогрес-бара */
-}
+
 
 .language {
   text-transform: uppercase;
@@ -194,8 +194,9 @@ h1{
   border: 5px solid #333 !important;
   padding: 7px; /* Внутрішній відступ для тексту */
   min-width: 100px; /* Мінімальна ширина для рівності коробок */
-  margin: 5px; /* Відстань між коробками */
+  margin: 5px 5px 0 5px; /* Відстань між коробками */
 }
+
 
 ///////////////////////////////
 // RIGHT //
@@ -268,15 +269,20 @@ h1{
 }
 
 //Line
-.left .horizontal-line {
-  width: 100%; /* Ширина лінії на всю ширину */
-  height: 3px; /* Товщина лінії */
+.horizontal-line{
+  width: 100%;
+  height: 2px; /* Товщина лінії */
   background-color: #333; /* Колір лінії */
-  margin: 38px 0; /* Відступи зверху і знизу */
 }
-.right .horizontal-line {
-  width: 100%; /* Ширина лінії на всю ширину */
-  height: 3px; /* Товщина лінії */
-  background-color: #333; /* Колір лінії */
-  margin: 47px 0; /* Відступи зверху і знизу */
+.main-left .horizontal-line {
+  margin: 40px 0  40px 0; /* Відступи */
+}
+.main-right .horizontal-line {
+  margin: 47px 0; /* Відступи  */
+}
+.main-left .horizontal-line:last-child {
+  margin: 40px 0 0 0 ; /* Відступи */
+}
+.main-right .horizontal-line:last-child {
+  margin: 45px 0 0 0 ; /* Відступи */
 }
