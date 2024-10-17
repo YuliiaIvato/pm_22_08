@@ -4,20 +4,19 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-@mixin heading-styles($font-size, $margin) {
+@mixin heading-styles($font-size) {
   text-transform: uppercase;
   font-weight: 800;
   font-size: $font-size;
-  margin: $margin;
 }
 
 h2 {
-  @include heading-styles(40px, 0 0 20px);
+  @include heading-styles(40px);
   display: flex;
 }
 
 h3 {
-  @include heading-styles(27px, 20px 0 0);
+  @include heading-styles(27px);
 }
 
 p {
@@ -136,9 +135,11 @@ h1 {
   padding: 0;
   background-color: #eeeeee;
 }
+
 .main-left {
   padding: 70px;
 }
+
 .main-right {
   padding: 0 70px 70px 70px;
   background-color: white;
@@ -312,7 +313,7 @@ h1 {
 }
 
 .main-left .horizontal-line {
-  margin: 35px 0 35px 0;
+  margin: 35px 0;
 }
 
 .main-right .horizontal-line {
