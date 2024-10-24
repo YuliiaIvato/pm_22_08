@@ -1,10 +1,8 @@
 const gulp = require("gulp");
-const { src, dest, series, parallel, watch } = require('gulp');
+const {src, dest, series, parallel, watch} = require('gulp');
 const file_include = require('gulp-file-include')
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
-// const sass = require('sass');
-// const gulpSass = require('gulp-sass')(sass);
 
 const postcss = require('gulp-postcss');
 const cssnano = require('gulp-cssnano');
@@ -15,13 +13,13 @@ const autoprefixer = require('autoprefixer');
 const browserSync = require('browser-sync').create();
 
 // html task
-const html_task = () =>  src('app/*.html')
+const html_task = () => src('app/*.html')
     .pipe(file_include({
         prefix: '@@',
         basepath: '@file'
     }))
     .pipe(dest('dist'))
-.pipe(browserSync.stream());
+    .pipe(browserSync.stream());
 
 
 //js task
@@ -32,30 +30,18 @@ const js_task = () => src('app/js/*.js')
     .pipe(browserSync.stream());
 
 
-//scss task
-// const scss_task = () => {
-//     return src('app/scss/*.scss') // Вибір файлів SCSS
-//         .pipe(sass().on('error', sass.logError)) // Компіляція SCSS у CSS
-//         .pipe(cssnano()) // Мінімізація CSS
-//         .pipe(postcss({}))
-//         .pipe(rename({ suffix: '.min' })) // Додавання суфіксу .min до файлу
-//         .pipe(dest('dist/css')) // Збереження результату
-//         .pipe(browserSync.stream());
-// };
-
 const scss_task = () => {
     return src('app/scss/*.scss') // Вибір файлів SCSS
         .pipe(sass().on('error', sass.logError)) // Компіляція SCSS у CSS
         .pipe(postcss([autoprefixer()])) // Додавання префіксів
         .pipe(cssnano()) // Мінімізація CSS
-        .pipe(rename({ suffix: '.min' })) // Додавання суфіксу .min до файлу
+        .pipe(rename({suffix: '.min'})) // Додавання суфіксу .min до файлу
         .pipe(dest('dist/css')) // Збереження результату
         .pipe(browserSync.stream());
 };
 
 
-
-const img_task = () =>  src('app/img/*.+(jpg|jpeg|png|gif)',{encoding: false})
+const img_task = () => src('app/img/*.+(jpg|jpeg|png|gif)', {encoding: false})
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
@@ -63,7 +49,6 @@ const img_task = () =>  src('app/img/*.+(jpg|jpeg|png|gif)',{encoding: false})
     }))
     .pipe(dest('dist/img'))
     .pipe(browserSync.stream());
-
 
 
 // BrowserSync task
@@ -83,4 +68,4 @@ const watch_task = () => {
     watch('app/img/*.+(jpg|jpeg|png|gif', img_task);
 }
 
-exports.default = series(html_task, scss_task, img_task, watch_task,js_task );
+exports.default = series(html_task, scss_task, img_task, watch_task, js_task);

@@ -4,6 +4,35 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.header-i {
+  cursor: pointer;
+}
+.triangle {
+  display: inline-block; // щоб обертався
+  transition: transform 0.3s ease; /*  анімація обертання */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;  /* Ліва сторона  */
+  border-right: 10px solid transparent; /* Права сторона  */
+  border-bottom: 20px solid ;      /* Нижня сторона  */
+  margin: 20px 20px 20px auto;
+
+}
+.rotated {
+  transform: rotate(180deg); /* Обертаємо трикутник на 180 градусів */
+}
+
+
+.folding-content {
+  max-height:500px ;
+  overflow: hidden; /* приховує будь-який контент, що виходить за межі визначеної максимальної висоти */
+  transition: max-height 0.5s ease;
+}
+.folding-content.expand {
+  max-height: 0; /* максимальна висота контенту зменшується до 0, що згортає його. */
+}
+
+//////////
 @mixin heading-styles($font-size) {
   text-transform: uppercase;
   font-weight: 800;
@@ -131,9 +160,14 @@ h1 {
 
 ///////////////////////////////
 // main//
-.left, .right {
+.left {
   padding: 0;
   background-color: #eeeeee;
+}
+
+.right {
+  padding: 0;
+  background-color: white;
 }
 
 .main-left {
