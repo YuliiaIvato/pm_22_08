@@ -25,6 +25,25 @@ function getDataXMLHttpRequest() {
 // Виклик функції для отримання даних через XMLHttpRequest
 getDataXMLHttpRequest();
 
+// Функція для асинхронного отримання даних з JSON за допомогою Fetch API
+async function getDataFetch() {
+    const url = '/data/data.json'; // Шлях до файлу JSON
+
+    try {
+        const response = await fetch(url); // Запит на сервер
+        if (!response.ok) {
+            throw new Error('Помилка при завантаженні даних'); // Перевірка статусу відповіді
+        }
+        const data = await response.json();  // Перетворення JSON у JavaScript об'єкт
+        renderData(data); // Функція для відображення даних на сторінці
+    } catch (error) {
+        console.error('Помилка під час отримання даних:', error); // Обробка помилок
+    }
+}
+
+// Виклик асинхронної функції для отримання даних через Fetch API
+getDataFetch();
+
 // Функція для відображення даних на сторінці
 function renderData(data) {
     // Відображення особистої інформації
