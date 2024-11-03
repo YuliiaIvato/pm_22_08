@@ -1,0 +1,75 @@
+{
+  "personal_info": {
+    "name": "NOEL TAYLOR",
+    "title": "GRAPHIC & WEB DESIGNER",
+    "contact": {
+      "phone_numbers": ["+1-718-310-5588", "+1-313-381-8167"],
+      "website": "www.yourwebsite.com",
+      "email": "yourinfo@email.com",
+      "address": "769 Prudence Street, Lincoln Park, MI 48146"
+    }
+  },
+  "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but the leap into electronic typesetting unchanged.",
+  "skills": [
+    { "name": "Adobe Photoshop", "level": 70 },
+    { "name": "Adobe Illustrator", "level": 70 },
+    { "name": "Microsoft PowerPoint", "level": 70 },
+    { "name": "Microsoft Word", "level": 70 },
+    { "name": "HTML-S/CSS-3", "level": 70 }
+  ],
+  "languages": ["English", "Spanish", "French"],
+  "hobbies": [
+    { "name": "Book Reading", "level": 70 },
+    { "name": "Traveling", "level": 70 },
+    { "name": "Playing Chess", "level": 70 }
+  ],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "degree": "Master Degree Graduate",
+      "years": "2011 - 2013"
+    },
+    {
+      "institution": "University of Chicago",
+      "degree": "Bachelor Degree Graduate",
+      "years": "2007 - 2010"
+    }
+  ],
+  "references": [
+    {
+      "name": "Darwin B. Magana",
+      "address": "1964 Harley Brook Lane Johnstown, PA 15904",
+      "phone": "+1-970-533-3393",
+      "email": "www@yourwebsite.com"
+    },
+    {
+      "name": "Robert J. Belvin",
+      "address": "1283 Little Acres Lane Champaign, IL 61820",
+      "phone": "+1-908-4987-5103",
+      "email": "www@yourwebsite.com"
+    }
+  ],
+  "job_experience": [
+    {
+      "job_title": "Web Designer",
+      "company": "Creative Agency",
+      "location": "Chicago",
+      "duration": "2020 - Present",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+    },
+    {
+      "job_title": "Graphic Designer",
+      "company": "Creative Market",
+      "location": "Chicago",
+      "duration": "2015 - 2020",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+    },
+    {
+      "job_title": "Marketing Manager",
+      "company": "Manufacturing Agency",
+      "location": "NJ",
+      "duration": "2013 - 2015",
+      "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+    }
+  ]
+}
