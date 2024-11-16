@@ -16,12 +16,10 @@ body {
   border-right: 10px solid transparent; /* Права сторона  */
   border-bottom: 20px solid ;      /* Нижня сторона  */
   margin: 20px 20px 20px auto;
-
+  &.rotated {
+    transform: rotate(180deg);/* Обертаємо трикутник на 180 градусів */
+  }
 }
-.rotated {
-  transform: rotate(180deg); /* Обертаємо трикутник на 180 градусів */
-}
-
 
 .folding-content {
   max-height:500px ;

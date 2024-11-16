@@ -3,25 +3,56 @@
     "name": "NOEL TAYLOR",
     "title": "GRAPHIC & WEB DESIGNER",
     "contact": {
-      "phone_numbers": ["+1-718-310-5588", "+1-313-381-8167"],
+      "phone_numbers": [
+        "+1-718-310-5588",
+        "+1-313-381-8167"
+      ],
       "website": "www.yourwebsite.com",
       "email": "yourinfo@email.com",
-      "address": "769 Prudence Street, Lincoln Park, MI 48146"
+      "address": "769 Prudence Street Lincoln Park, MI 48146"
     }
   },
   "about": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type. It has survived not only five centuries, but the leap into electronic typesetting unchanged.",
   "skills": [
-    { "name": "Adobe Photoshop", "level": 70 },
-    { "name": "Adobe Illustrator", "level": 70 },
-    { "name": "Microsoft PowerPoint", "level": 70 },
-    { "name": "Microsoft Word", "level": 70 },
-    { "name": "HTML-S/CSS-3", "level": 70 }
+    {
+      "name": "Adobe Photoshop",
+      "level": 70
+    },
+    {
+      "name": "Adobe Illustrator",
+      "level": 70
+    },
+    {
+      "name": "Microsoft PowerPoint",
+      "level": 70
+    },
+    {
+      "name": "Microsoft Word",
+      "level": 70
+    },
+    {
+      "name": "HTML-S/CSS-3",
+      "level": 70
+    }
   ],
-  "languages": ["English", "Spanish", "French"],
+  "languages": [
+    "English",
+    "Spanish",
+    "French"
+  ],
   "hobbies": [
-    { "name": "Book Reading", "level": 70 },
-    { "name": "Traveling", "level": 70 },
-    { "name": "Playing Chess", "level": 70 }
+    {
+      "name": "Book Reading",
+      "level": 70
+    },
+    {
+      "name": "Traveling",
+      "level": 70
+    },
+    {
+      "name": "Playing Chess",
+      "level": 70
+    }
   ],
   "education": [
     {
