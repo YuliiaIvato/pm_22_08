@@ -44,8 +44,8 @@ const img_task = () => src('app/img/*.+(jpg|jpeg|png|gif)', {encoding: false})
     .pipe(dest('dist/img'))
     .pipe(browserSync.stream());
 
-const copy_json = () => src('app/data/*.json') // Вибирає всі JSON файли у /data
-    .pipe(dest('dist/data')) // Копіює їх у dist/data
+const copy_json = () => src('app/data/*.json')
+    .pipe(dest('dist/data'))
     .pipe(browserSync.stream()); // Оновлює сторінку
 
 const browserSync_task = () => {
@@ -62,7 +62,7 @@ const watch_task = () => {
     watch('app/scss/*.scss', parallel(scss_task));
     watch('app/js/*.js', parallel(js_task));
     watch('app/img/*.+(jpg|jpeg|png|gif)', img_task);
-    watch('app/data/*.json', series(copy_json)); // Слідкування за змінами в JSON-файлах
+    watch('app/data/*.json', series(copy_json));
 };
 
 exports.default = series(html_task,copy_json, img_task, scss_task, watch_task, js_task);

@@ -67,30 +67,8 @@ getDataFetch();
 
 
 function renderData(data) {
-    // const references = document.querySelector(".references");
-    // // Очищення поточного вмісту
-    // references.innerHTML = `
-    //     <div class="header-i">
-    //         <i class="main-i bi bi-person-lines-fill"></i>
-    //         <h2>REFERENCES</h2>
-    //         <span class="triangle"></span>
-    //     </div>
-    //     <div class="folding-content">
-    //         ${data.references.map(reference => `
-    //             <div class="reference-item">
-    //                 <h3>${reference.name}</h3>
-    //                 <p>${reference.address}</p>
-    //                 <p>Tel: ${reference.phone}</p>
-    //                 <p>Email: <a href="mailto:${reference.email}">${reference.email}</a></p>
-    //             </div>
-    //         `).join('')}
-    //     </div>
-    // `;
-
-    // Отримуємо елемент для вставки даних
     const contact = document.querySelector(".contact");
 
-    // Очищуємо вміст та вставляємо дані
     contact.innerHTML = `
     <div class="contact-header">
         <i class="contact-header-i bi bi-person-fill"></i>
@@ -121,6 +99,5 @@ function renderData(data) {
         </div>
     </div>
 `;
-
 
 }
